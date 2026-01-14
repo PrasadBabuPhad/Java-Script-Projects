@@ -1,0 +1,120 @@
+/* General page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body {
+    background: transparent;
+}
+
+
+/* Container box */
+.container {
+    background: #ffffff;
+    padding: 25px 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5a2ea6;
+}
+
+/* Form styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+    border-color: #7a42f4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(122, 66, 244, 0.4);
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #7a42f4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #40c510;
+}
+
+/* Result box */
+.result {
+    margin-top: 20px;
+    background: #f7f3ff;
+    padding: 15px;
+    border-left: 5px solid #7a42f4;
+    border-radius: 6px;
+    color: #333;
+    display: none; /* Hidden until JS updates it */
+    white-space: pre-line;
+}
+
+
+/* Animated stars background */
+.stars {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(2px 2px at 10% 20%, #fffacd, transparent),
+        radial-gradient(1.5px 1.5px at 30% 70%, #ffd966, transparent),
+        radial-gradient(2px 2px at 50% 40%, #ffffff, transparent),
+        radial-gradient(1px 1px at 70% 80%, #ffe599, transparent),
+        radial-gradient(2px 2px at 90% 30%, #fff2cc, transparent),
+        radial-gradient(1.5px 1.5px at 20% 90%, #ffd966, transparent),
+        radial-gradient(1px 1px at 80% 60%, #ffffff, transparent);
+    background-color: #070b2d;   /* darker sky */
+    animation: twinkle 4s infinite alternate;
+    z-index: -1;
+}
+
+
+
+
+/* Star twinkling animation */
+@keyframes twinkle {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
